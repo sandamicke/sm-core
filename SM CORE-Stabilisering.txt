@@ -1,0 +1,48 @@
+✅ SM CORE – Stabiliserings‑checklista
+1. Rensa bort duplicerade filer
+[ ] Ta bort DocumentGeneratorInstance.js
+
+[ ] Ta bort OCRProcessorInstance.js
+
+[ ] Ta bort JobManagerInstance.js
+
+2. Säkerställ singleton‑arkitektur
+[ ] Kontrollera att varje modul exporterar en instans, inte en klass
+
+[ ] Uppdatera require‑vägar i events om det behövs
+
+3. Standardisera eventfiler
+Varje event ska:
+
+[ ] logga
+
+[ ] uppdatera status
+
+[ ] anropa EN modul
+
+[ ] trigga nästa event
+
+4. Dokumentera pipen
+[ ] Uppdatera SM CORE-LATHUND.txt med pipeline‑kedjan
+
+5. Gör systemet självläkande
+[ ] Lägg in fallback‑logik där null kan förekomma
+
+[ ] Säkerställ att pipen aldrig kraschar på saknad data
+
+6. Isolera PDF‑delen
+[ ] Se till att PDFGenerator inte känner till events, JobStore eller export
+
+7. Isolera ExportManager
+[ ] ExportManager ska bara spara fil och returnera path
+
+8. Håll JobStore ren
+[ ] Endast add, get, updateStatus, loggning
+
+9. Inför expansionsrutin
+[ ] “Jag vill lägga till X” → jag ger färdiga filer → du klistrar in
+
+10. Inför 20:00‑regeln
+[ ] Inga stora beslut efter 20:00
+
+[ ] Endast små, lugna ändringar
