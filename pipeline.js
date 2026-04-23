@@ -1,4 +1,4 @@
-// pipeline.js – SM Core Job Pipeline (minimal stabil version)
+// pipeline.js – SM Core Job Pipeline (utökad stabil version)
 
 import fs from "fs";
 
@@ -21,15 +21,25 @@ function saveProject(data) {
   fs.writeFileSync(PROJECT_FILE, JSON.stringify(data, null, 2));
 }
 
-// Skapa ett nytt jobb
+// Skapa ett nytt jobb med komplett struktur
 function createJob() {
   const timestamp = new Date().toISOString();
   const id = "job-" + Date.now();
 
   return {
     id,
+    title: "Nytt jobb",
     created: timestamp,
     status: "new",
+
+    // UI-fält
+    document: null,
+    export: null,
+
+    // Pipeline-fält
+    before: [],
+    after: [],
+
     description: "Automatiskt genererat jobb via pipeline.js"
   };
 }
