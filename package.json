@@ -1,6 +1,7 @@
 {
   "name": "sm-core",
   "private": true,
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
