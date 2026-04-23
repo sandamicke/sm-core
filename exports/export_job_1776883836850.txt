@@ -1,6 +1,0 @@
-Export Job ID: job_1776883836850
-Källa: /home/projects/stackblitz-starters-viuqq8zy/documents/document_job_1776883836850.txt
-Metadata: {
-  "customer": "Testkund",
-  "technician": "Sandamicke"
-}
