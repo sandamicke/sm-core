@@ -21,17 +21,17 @@ app.get('/', (req, res) => {
     <hr>
   `;
 
-  if (project.jobs.length === 0) {
+  if (!project.jobs || project.jobs.length === 0) {
     html += `<p>Inga jobb ännu. Kör pipen i terminalen.</p>`;
   } else {
     html += `<ul>`;
     for (const job of project.jobs) {
       html += `
         <li>
-          <strong>${job.job_id}</strong><br>
+          <strong>${job.title || job.id}</strong><br>
           Status: ${job.status}<br>
-          Dokument: ${job.document_path || '–'}<br>
-          Export: ${job.exported_path || '–'}
+          Dokument: ${job.document || '–'}<br>
+          Export: ${job.export || '–'}
         </li>
         <br>
       `;
