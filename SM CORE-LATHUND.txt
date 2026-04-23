@@ -1,0 +1,86 @@
+===========================
+SM CORE – LATHUND
+===========================
+
+PIPELINE (full kedja):
+
+file.uploaded
+→ images.received
+→ job.created
+→ job.ready_for_processing
+→ ocr.completed
+→ document.generated
+→ document.saved
+→ completed
+
+
+BESKRIVNING AV STEGEN:
+
+1) file.uploaded
+   - Triggeras när en fil laddas upp
+   - Loggar och skickar vidare till images.received
+
+2) images.received
+   - Tar emot before/after + metadata
+   - Skapar jobb via JobManager
+   - JobManager triggar job.created och job.ready_for_processing
+
+3) job.created
+   - Loggar att jobbet skapats
+
+4) job.ready_for_processing
+   - Startar OCR-processen via OCRProcessor
+
+5) ocr.completed
+   - Tar emot OCR-resultat
+   - Uppdaterar status
+   - Hämtar eller bygger job-objekt
+   - Startar PDF-generering via DocumentGenerator
+
+6) document.generated
+   - PDF är skapad
+   - Exporterar filen via ExportManager
+   - Triggar document.saved
+
+7) document.saved
+   - Markerar jobbet som completed
+   - Pipen är klar
+
+
+MODULER (singleton):
+
+- JobManager
+- OCRProcessor
+- DocumentGenerator
+- ExportManager
+- ProjectManager
+- JobStore
+- HistoryLogger
+- dispatcher
+
+
+REGLER:
+
+- Alla events följer samma struktur:
+  1. logga
+  2. uppdatera status
+  3. anropa EN modul
+  4. trigga nästa event
+
+- Inga *Instance.js-filer används längre
+- Alla moduler exporterar EN instans
+- Pipen ska alltid vara självläkande
+
+Backup & Återställ
+node backup.js
+node restore.js
+
+Rensa systemet från gammalt.
+node reset.js¨
+
+
+Kör programmet
+node app.js
+
+Starta server
+node server.js
