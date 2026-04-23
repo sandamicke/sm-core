@@ -1,0 +1,11 @@
+Job ID: job_1776883836850
+   Before: {
+  "name": "before.jpg"
+}
+   After: {
+  "name": "after.jpg"
+}
+   Metadata: {
+  "customer": "Testkund",
+  "technician": "Sandamicke"
+}
