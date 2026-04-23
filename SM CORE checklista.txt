@@ -1,0 +1,196 @@
+SM KONSULT & DATA DOKUMENTATION – DAGORDNING / CHECKLISTA TILL MÅL
+⭐ FAS 1 — Bildflödet (Fundament 1)
+Målet: Systemet ska kunna ta emot två bilder (före/efter) utan manuell hantering.
+
+1.1 – Inmatningskanal
+[ ] Bestäm kanal: mobilapp, formulär eller uppladdningspunkt
+
+[ ] Säkerställ att två bilder hör ihop (före/efter‑par)
+
+[ ] Automatisk metadata:
+
+[ ] tid
+
+[ ] plats
+
+[ ] kund
+
+[ ] tekniker
+
+1.2 – Filstruktur
+[ ] Automatisk mappstruktur per kund
+
+[ ] Automatisk namngivning
+
+[ ] Automatisk versionshantering
+
+[ ] Inga manuella steg
+
+1.3 – Koppling till SM Core
+[ ] FileIntake‑modul tar emot bilder
+
+[ ] Event: file.uploaded
+
+[ ] Eventkedja testas
+
+[ ] Backup/restore integrerat
+
+Fas 1 är klar när:  
+Du kan ta två bilder → de hamnar rätt → systemet vet vad som är före/efter.
+
+⭐ FAS 2 — AI‑analysen (Fundament 2)
+Målet: Systemet ska förstå vad som hänt mellan före/efter.
+
+2.1 – Bildtolkning
+[ ] Identifiera elcentral
+
+[ ] Identifiera komponenter
+
+[ ] Identifiera ändringar
+
+[ ] Identifiera risker
+
+2.2 – Skillnadsanalys
+[ ] Vad har lagts till?
+
+[ ] Vad har tagits bort?
+
+[ ] Vad har bytts?
+
+[ ] Vad är fel?
+
+2.3 – AI‑motor
+[ ] Teknisk rapport
+
+[ ] Kundvänlig rapport
+
+[ ] Lagkravstext
+
+[ ] Förklaringar och motiveringar
+
+Fas 2 är klar när:  
+Systemet kan beskriva jobbet bättre än en människa.
+
+⭐ FAS 3 — Dokumentmotorn (Fundament 3)
+Målet: Alla dokument skapas automatiskt.
+
+3.1 – Dokumenttyper
+[ ] Arbetsrapport
+
+[ ] Kontroll före idrifttagning
+
+[ ] Riskbedömning
+
+[ ] Dokumentation av ändringar
+
+[ ] Gruppförteckning (om centralen fotas rakt framifrån)
+
+[ ] Fakturaunderlag
+
+3.2 – Automatisering
+[ ] Fylls i automatiskt
+
+[ ] Inga manuella fält
+
+[ ] Inga mallar du behöver röra
+
+[ ] Allt genereras i bakgrunden
+
+3.3 – Export
+[ ] PDF‑generering
+
+[ ] Metadata i dokument
+
+[ ] Versionshantering
+
+Fas 3 är klar när:  
+Du får en komplett dokumentation utan att skriva en enda rad.
+
+⭐ FAS 4 — Arkiv + fakturaflöde (Fundament 4)
+Målet: Allt ska hamna rätt och skickas rätt — automatiskt.
+
+4.1 – Arkivering
+[ ] Spara i rätt kundmapp
+
+[ ] Spara i rätt projektmapp
+
+[ ] Spara i historik
+
+[ ] Spara i revisionslogg
+
+4.2 – Kommunikation
+[ ] Skicka till kund (valfritt)
+
+[ ] Skicka till Cansolo
+
+[ ] Skicka till intern logg
+
+4.3 – Fakturaflöde
+[ ] Automatiskt fakturaunderlag
+
+[ ] Automatiska rader
+
+[ ] Automatiska timmar
+
+[ ] Automatiska materialposter
+
+Fas 4 är klar när:  
+Du tar två bilder → kunden får dokument → Cansolo får fakturaunderlag → allt arkiveras.
+
+⭐ FAS 5 — Drift, backup och stabilitet
+Det här är det vi redan börjat bygga.
+
+5.1 – Snapshot‑system
+[x] backup.js
+
+[x] restore.js (interaktiv)
+
+[x] versionshantering
+
+[x] lathund
+
+5.2 – SM Core Foundation
+[x] Eventmotor
+
+[x] Dispatcher
+
+[x] FileIntake
+
+[x] ProjectManager
+
+[x] Ren körning utan varningar
+
+5.3 – Stabilitet
+[ ] Loggning
+
+[ ] Felhantering
+
+[ ] Testfall
+
+[ ] Driftläge
+
+⭐ FAS 6 — Produktionsklar version
+När alla fundament är klara:
+
+[ ] Systemet körs utan manuell handpåläggning
+
+[ ] Du tar två bilder
+
+[ ] Allt annat sker automatiskt
+
+[ ] Dokumentation, fakturaunderlag och arkiv är klara
+
+[ ] Systemet är redo för verkliga jobb
+
+⭐ Det här är vår officiella dagordning/checklista
+Den tar oss från där vi står → till ett fullautomatiserat system.
+
+Den är:
+
+komplett
+
+i rätt ordning
+
+utan sidospår
+
+byggd för 10 års hållbarhet
